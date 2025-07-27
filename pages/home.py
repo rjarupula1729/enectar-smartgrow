@@ -30,11 +30,11 @@ if selection == "🏡 Home":
     """)
 
 elif selection == "🌱 Plant Recommendation":
-    import recommendations
+    from pages import recommendations
     recommendations.main()
 
 elif selection == "📋 Plant Tracker":
-    import plant_tracker
+    from pages import plant_tracker
     plant_tracker.main()
 
 #elif selection == "🌾 Harvest Estimator":
@@ -42,17 +42,17 @@ elif selection == "📋 Plant Tracker":
 #    harvest_estimator.main()
 
 elif selection == "💰 Cost Estimator":
-    import price_model
+    from pages import price_model
     price_model.main()
 
 elif selection == "🛒 Shop & Cart":
-    import shop_cart
+    from pages import shop_cart
     shop_cart.main()
 
 elif selection == "🎮 Games / Entertainment / Knowledge Check":
-    import game_zone
+    from pages import game_zone
     game_zone.main()
 
 elif selection == "🤝 Expert Support & Monetization":
-    import growpal_connect
+    from pages import growpal_connect
     growpal_connect.main()
