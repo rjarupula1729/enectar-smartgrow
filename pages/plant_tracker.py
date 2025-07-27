@@ -1,11 +1,13 @@
 import streamlit as st
 import json
 import datetime
+import os
 
 def main():   
     # Load plant data
     def load_plants_data():
-        with open(".\data\plants_db.json", "r") as file:
+        file_path = os.path.join("data", "plants_db.json")
+        with open(file_path, "r") as file:
             return json.load(file)
 
     plants = load_plants_data()
