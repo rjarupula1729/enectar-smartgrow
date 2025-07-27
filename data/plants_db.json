@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Tomato",
+    "space": ["balcony", "terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [2, 4],
+    "health_benefits": ["heart health", "vitamin C", "antioxidants"]
+  },
+  {
+    "name": "Spinach",
+    "space": ["balcony", "window"],
+    "sunlight": ["partial"],
+    "water": "medium",
+    "family_size": [2, 6],
+    "health_benefits": ["iron", "blood pressure", "eye health"]
+  },
+  {
+    "name": "Carrot",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [2, 4],
+    "health_benefits": ["vision", "immunity", "skin health"]
+  },
+  {
+    "name": "Coriander",
+    "space": ["window", "balcony"],
+    "sunlight": ["partial", "full"],
+    "water": "low",
+    "family_size": [1, 4],
+    "health_benefits": ["digestion", "diabetes", "anti-inflammatory"]
+  },
+  {
+    "name": "Bitter Gourd",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [4, 6],
+    "health_benefits": ["diabetes", "detox", "liver health"]
+  },
+  {
+    "name": "Fenugreek",
+    "space": ["window", "balcony"],
+    "sunlight": ["partial"],
+    "water": "medium",
+    "family_size": [2, 6],
+    "health_benefits": ["digestion", "cholesterol", "milk production"]
+  },
+  {
+    "name": "Holy Basil (Tulsi)",
+    "space": ["balcony", "window"],
+    "sunlight": ["full", "partial"],
+    "water": "low",
+    "family_size": [1, 2],
+    "health_benefits": ["cold", "respiratory", "stress relief"]
+  },
+  {
+    "name": "Mint",
+    "space": ["balcony", "window"],
+    "sunlight": ["partial"],
+    "water": "high",
+    "family_size": [2, 5],
+    "health_benefits": ["digestion", "nausea", "oral health"]
+  },
+  {
+    "name": "Bottle Gourd",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "high",
+    "family_size": [4, 6],
+    "health_benefits": ["hydration", "weight loss", "cooling"]
+  },
+  {
+    "name": "Okra (Lady Finger)",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [2, 5],
+    "health_benefits": ["diabetes", "pregnancy", "digestion"]
+  },
+  {
+    "name": "Chili",
+    "space": ["balcony", "terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [2, 4],
+    "health_benefits": ["pain relief", "metabolism", "vitamin C"]
+  },
+  {
+    "name": "Cabbage",
+    "space": ["terrace"],
+    "sunlight": ["partial"],
+    "water": "high",
+    "family_size": [3, 6],
+    "health_benefits": ["cancer prevention", "digestion", "heart health"]
+  },
+  {
+    "name": "Beetroot",
+    "space": ["terrace"],
+    "sunlight": ["partial", "full"],
+    "water": "medium",
+    "family_size": [2, 5],
+    "health_benefits": ["blood pressure", "anemia", "liver detox"]
+  },
+  {
+    "name": "Radish",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [2, 5],
+    "health_benefits": ["digestion", "respiratory", "hydration"]
+  },
+  {
+    "name": "Lettuce",
+    "space": ["balcony", "terrace"],
+    "sunlight": ["partial"],
+    "water": "high",
+    "family_size": [2, 4],
+    "health_benefits": ["weight loss", "hydration", "heart"]
+  },
+  {
+    "name": "Capsicum",
+    "space": ["balcony", "terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [2, 5],
+    "health_benefits": ["vitamin C", "eyesight", "immunity"]
+  },
+  {
+    "name": "Garlic",
+    "space": ["balcony"],
+    "sunlight": ["partial"],
+    "water": "low",
+    "family_size": [2, 4],
+    "health_benefits": ["blood pressure", "cholesterol", "antibacterial"]
+  },
+  {
+    "name": "Onion",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "medium",
+    "family_size": [4, 6],
+    "health_benefits": ["blood sugar", "inflammation", "heart"]
+  },
+  {
+    "name": "Pumpkin",
+    "space": ["terrace"],
+    "sunlight": ["full"],
+    "water": "high",
+    "family_size": [4, 6],
+    "health_benefits": ["vision", "immunity", "fiber"]
+  },
+  {
+    "name": "Green Peas",
+    "space": ["terrace", "balcony"],
+    "sunlight": ["partial"],
+    "water": "medium",
+    "family_size": [2, 4],
+    "health_benefits": ["protein", "digestion", "weight loss"]
+  }
+]
