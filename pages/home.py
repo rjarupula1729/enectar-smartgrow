@@ -20,14 +20,28 @@ selection = st.sidebar.radio("Go to", [
 if selection == "🏡 Home":
     st.title("🏡 Welcome to Smart Urban Gardening Platform")
     st.markdown("""
-        This app helps urban users:
-        - Grow their own vegetables 🍅🌿
-        - Estimate harvest & cost 💸
-        - Shop required materials 🛍️
-        - Play, learn & earn with gardening 🎉
+        🌱 **Empowering you to grow your own food – no matter where you live!**  
+        This platform is designed to help urban dwellers cultivate vegetables and herbs based on their available space, time, and environmental conditions.
 
-        Use the sidebar to navigate through different tools.
+        ### ✨ Key Features:
+        - 🧮 **Estimate Costs & Yields:** Plan your harvest with our smart cost calculator  
+        - 🛒 **Get What You Need:** Shop seeds, tools, and kits curated for your setup  
+        - 🎮 **Learn & Play:** Gamified learning and interactive guides to make gardening fun  
+        - 📊 **Monitor Growth:** Track plant progress and get personalized care tips  
+
+        👉 Use the sidebar to navigate through the features and start your gardening journey!
     """)
+  #  st.title("🌿 Why this App?")
+    st.markdown("""
+        ## 🌿 Why this App ?
+
+            **Grow fresh, organic veggies right from your balcony, terrace, or backyard!**  
+            We're on a mission to bring healthy, pesticide-free food closer to your plate — by helping you grow it yourself.
+
+            ✅ Cut down grocery expenses  
+            ✅ Improve your health naturally  
+            ✅ Contribute to a greener, cleaner world 🌍  
+        """)
 
 elif selection == "🌱 Plant Recommendation":
     from pages import recommendations

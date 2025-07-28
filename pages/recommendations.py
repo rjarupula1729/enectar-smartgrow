@@ -1,29 +1,52 @@
 import streamlit as st
 import random
 from datetime import date
+import datetime
+
+
+# Gardening Tips
+DAILY_TIPS = [
+        "💧 Water your plants early in the morning to reduce evaporation and prevent fungal growth.",
+        "✂️ Prune dead leaves regularly to promote healthy and bushy plant growth.",
+        "☀️ Ensure your plants get enough sunlight, but shield them from harsh midday heat.",
+        "🛡️ Use neem oil as a natural and effective way to keep pests at bay.",
+        "🍂 Apply mulch to retain soil moisture, suppress weeds, and protect roots.",
+        "🗓️ Stick to a care calendar — consistency is key for happy plants!",
+        "🚫 Avoid overwatering — soggy roots can lead to root rot and disease.",
+        "🔄 Rotate indoor plants weekly to ensure even exposure to sunlight.",
+        "🌼 Use compost to enrich your soil naturally and improve plant vitality.",
+        "👆 Always check soil moisture before the next watering session.",
+        "🥚 Add crushed eggshells to your soil to boost calcium and deter slugs.",
+        "🌿 Companion planting works! Basil near tomatoes enhances flavor and repels pests.",
+        "🍌 Banana peels make a great natural fertilizer — rich in potassium and phosphorus.",
+        "📓 Keep a gardening journal to track what works well each season.",
+        "🌧️ Collect rainwater in barrels — it’s the best and most natural for your plants.",
+        "🌱 Soak seeds overnight before planting to speed up germination.",
+        "🌸 Deadhead flowers regularly to encourage new blooms.",
+        "🔄 Rotate seasonal crops to avoid depleting the same soil nutrients.",
+        "🍅 Prune tomato plants weekly to improve airflow and fruit yield.",
+        "🌞 Ensure sun-loving plants get at least 6 hours of direct sunlight daily.",
+        "🌿 Snip herbs often — it promotes bushy growth and delays flowering.",
+        "👁️ Check leaves frequently — yellowing can mean overwatering or nutrient deficiency.",
+        "🪴 Mulching materials like straw, leaves, or bark keep weeds down and moisture in.",
+        "💡 Fun fact: Companion planting can improve yields *and* reduce pests naturally!"
+    ]
+
+
+def get_daily_tip():
+    idx = datetime.date.today().toordinal() % len(DAILY_TIPS)
+    return DAILY_TIPS[idx]
 
 def main():
     # Title
     st.title("🌿 Urban Gardening Helper")
     st.subheader("Find plants suitable for your urban space 🌇")
 
-    # Gardening Tips
-    gardening_tips = [
-        "🌱 Water early in the morning to reduce evaporation.",
-        "🌿 Prune dead leaves regularly for healthy growth.",
-        "☀️ Give plants enough sunlight, but avoid midday heat.",
-        "🐛 Watch out for pests – neem oil works great!",
-        "🍃 Mulch helps retain soil moisture and reduce weeds.",
-        "📅 Create a care calendar – consistency is key!",
-        "🚿 Don’t overwater – soggy roots are harmful!",
-        "🪴 Rotate indoor plants weekly for even growth.",
-        "🌼 Use compost to enrich your soil naturally.",
-        "🔍 Check soil moisture before watering again."
-    ]
+    
 
     # Show random tip per visit
-    st.markdown("### 🌻 Gardening Tip")
-    st.success(random.choice(gardening_tips))
+    st.markdown("### 🧠 Gardening Tip of the Day")
+    st.info(get_daily_tip())
 
     # Simulated JSON-style plant database (inline)
     plants_data = [
