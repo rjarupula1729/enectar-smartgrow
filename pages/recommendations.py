@@ -47,6 +47,8 @@ def main():
     # Title
     st.title("🌿 Urban Gardening Helper")
     st.subheader("Find plants suitable for your urban space 🌇")
+    
+    @st.cache_data
     def load_plants_data():
         file_path = os.path.join("data", "plants_db.json")
         with open(file_path, "r") as file:
