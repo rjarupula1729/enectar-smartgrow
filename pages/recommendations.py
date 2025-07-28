@@ -1,8 +1,26 @@
 import streamlit as st
 import random
-from datetime import date
-import datetime
+from datetime import datetime, date
 import os, json
+
+
+USER_GARDEN_FILE = os.path.join("data", "user_garden.json")
+
+def add_to_user_garden(plant):
+    try:
+        with open(USER_GARDEN_FILE, 'r') as file:
+            garden_data = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        garden_data = []
+
+    if not any(p['name'] == plant['name'] for p in garden_data):
+        garden_data.append({
+            "name": plant['name'],
+            "added_on": datetime.today().strftime('%Y-%m-%d'),
+            "status": "Just Planted"
+        })
+        with open(USER_GARDEN_FILE, 'w') as file:
+            json.dump(garden_data, file, indent=2)
 
 
 # Gardening Tips
@@ -47,7 +65,7 @@ def main():
     # Title
     st.title("🌿 Urban Gardening Helper")
     st.subheader("Find plants suitable for your urban space 🌇")
-    
+
     @st.cache_data
     def load_plants_data():
         file_path = os.path.join("data", "plants_db.json")
@@ -96,6 +114,9 @@ def main():
                     st.write(f"**Care:** {plant['care']}")
                     st.write(f"**Growth Process:** {plant['growth_process']}")
                     st.markdown("---")
+                    if st.button(f"Add '{plant['name']}' to My Garden", key=plant['name']):
+                        add_to_user_garden(plant)
+                        st.success(f"{plant['name']} added to your garden!")
             else:
                 st.error("No matching plants found for the selected criteria.")
 
