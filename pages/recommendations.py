@@ -59,6 +59,10 @@ def add_to_user_garden(plant):
 
 
 
+def get_daily_tip():
+    idx = datetime.date.today().toordinal() % len(DAILY_TIPS)
+    return DAILY_TIPS[idx]
+
 
 
 def main():
@@ -67,9 +71,7 @@ def main():
     st.subheader("Find plants suitable for your urban space 🌇")
 
 
-    def get_daily_tip():
-        idx = datetime.date.today().toordinal() % len(DAILY_TIPS)
-        return DAILY_TIPS[idx]
+
 
 
 
