@@ -50,9 +50,8 @@ def main():
     # Title
     st.title("🌿 Urban Gardening Helper")
     st.subheader("Find plants suitable for your urban space 🌇")
-
     USER_GARDEN_FILE = os.path.join("data", "user_garden.json")
-
+    
     def get_daily_tip():
         idx = datetime.date.today().toordinal() % len(DAILY_TIPS)
         return DAILY_TIPS[idx]
