@@ -39,10 +39,7 @@ def get_daily_tip():
     return DAILY_TIPS[idx]
 
 
-def load_plants_data():
-    data_path = os.path.join("data", "plants_data.json")
-    with open(data_path, "r") as file:
-        return json.load(file)
+
 
 
 
@@ -50,14 +47,16 @@ def main():
     # Title
     st.title("🌿 Urban Gardening Helper")
     st.subheader("Find plants suitable for your urban space 🌇")
+    def load_plants_data():
+        file_path = os.path.join("data", "plants_db.json")
+        with open(file_path, "r") as file:
+            return json.load(file)
 
-    
 
     # Show random tip per visit
     st.markdown("### 🧠 Gardening Tip of the Day")
     st.info(get_daily_tip())
 
-    
     plants_data = load_plants_data()
     # Simulated JSON-style plant database (inline)
     
