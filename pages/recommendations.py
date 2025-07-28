@@ -7,21 +7,7 @@ import datetime
 
 USER_GARDEN_FILE = os.path.join("data", "user_garden.json")
 
-def add_to_user_garden(plant):
-    try:
-        with open(USER_GARDEN_FILE, 'r') as file:
-            garden_data = json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
-        garden_data = []
 
-    if not any(p['name'] == plant['name'] for p in garden_data):
-        garden_data.append({
-            "name": plant['name'],
-            "added_on": datetime.today().strftime('%Y-%m-%d'),
-            "status": "Just Planted"
-        })
-        with open(USER_GARDEN_FILE, 'w') as file:
-            json.dump(garden_data, file, indent=2)
 
 
 # Gardening Tips
@@ -53,9 +39,7 @@ DAILY_TIPS = [
     ]
 
 
-def get_daily_tip():
-    idx = datetime.date.today().toordinal() % len(DAILY_TIPS)
-    return DAILY_TIPS[idx]
+
 
 
 
@@ -67,10 +51,17 @@ def main():
     st.title("🌿 Urban Gardening Helper")
     st.subheader("Find plants suitable for your urban space 🌇")
 
+    def get_daily_tip():
+        idx = datetime.date.today().toordinal() % len(DAILY_TIPS)
+        return DAILY_TIPS[idx]
+
+
 
     # Show random tip per visit
     st.markdown("### 🧠 Gardening Tip of the Day")
     st.info(get_daily_tip())
+
+
 
     @st.cache_data
     def load_plants_data():
@@ -82,6 +73,28 @@ def main():
     plants_data = load_plants_data()
     # Simulated JSON-style plant database (inline)
     
+
+    def add_to_user_garden(plant):
+        try:
+            with open(USER_GARDEN_FILE, 'r') as file:
+                garden_data = json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            garden_data = []
+
+        if not any(p['name'] == plant['name'] for p in garden_data):
+            garden_data.append({
+                "name": plant['name'],
+                "added_on": datetime.today().strftime('%Y-%m-%d'),
+                "status": "Just Planted"
+            })
+            with open(USER_GARDEN_FILE, 'w') as file:
+                json.dump(garden_data, file, indent=2)
+
+
+
+
+
+
     # Input fields
     space = st.selectbox("Where do you want to grow?", ["Select", "balcony", "terrace", "window", "community garden"])
     sunlight = st.selectbox("How much sunlight do you get?", ["Select", "full", "partial", "shade"])
